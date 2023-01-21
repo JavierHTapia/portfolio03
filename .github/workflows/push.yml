@@ -9,7 +9,7 @@ jobs:
   deploy-page:
   runs-on: windows-latest
   steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Deploy 🚀
