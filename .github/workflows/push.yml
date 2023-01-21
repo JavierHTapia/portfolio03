@@ -1,0 +1,19 @@
+name: Deploy de la pagina
+on:
+  push:
+    permissions:
+      contents: write
+    branches:
+      - main
+jobs:
+  deploy-page:
+  runs-on: ubuntu-latest
+  steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: .
